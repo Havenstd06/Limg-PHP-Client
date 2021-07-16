@@ -18,12 +18,12 @@ composer require havenstd06/limg-php-client
 ## Usage
 
 ```php
-use Havenstd06\Limg\Client-PHP-Client\Limg;
+use Havenstd06\Limg\Client as Limg;
 
 $token = "abcdef1234";
-Client::setApiToken($token);
+Limg::setApiToken($token);
 
-$img = Client::upload('./images/test.png');
+$img = Limg::upload('./images/test.png');
 
 $getSuccess = $img->getSuccess(); // true || false
 $getStatus = $img->getStatus(); // 200
