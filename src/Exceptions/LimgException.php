@@ -1,7 +1,8 @@
 <?php
 
-
 namespace Havenstd06\Exceptions;
+
+namespace Havenstd06\Limg\Limg\Exceptions;
 
 /**
  * Class LimgException
@@ -9,5 +10,4 @@ namespace Havenstd06\Exceptions;
  */
 class LimgException extends \Exception
 {
-
 }

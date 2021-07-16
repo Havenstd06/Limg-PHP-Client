@@ -52,10 +52,6 @@ class Image extends Entity
     {
         $datetime = $this->data['data']['datetime'];
 
-        if (! isset($datetime)) {
-            return null;
-        }
-
         $date = new DateTime();
         $date->setTimestamp($datetime);
 

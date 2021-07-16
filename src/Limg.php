@@ -4,7 +4,11 @@ namespace Havenstd06;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
+<<<<<<< HEAD
 use Havenstd06\Entity\Image;
+=======
+use Havenstd06\Limg\Entity\Image;
+>>>>>>> 218a7fbe4e7c08266bbb9c63eb7339c335fcb5a3
 
 /**
  * Class Limg
@@ -31,6 +35,7 @@ class Limg
             if (self::$token === null) {
                 $msg = 'No token provided, and none is globally set. ';
                 $msg .= 'Use Limg::setApiToken, or instantiate the Limg class with a $token parameter.';
+
                 throw new LimgException($msg);
             }
         } else {
@@ -52,7 +57,7 @@ class Limg
 
     private static function validateToken($token)
     {
-        if (!is_string($token)) {
+        if (! is_string($token)) {
             throw new \InvalidArgumentException('Token is not a string.');
         }
 
@@ -83,7 +88,7 @@ class Limg
             $response = $guzzleClient->request('POST', 'https://limg.app/api/upload', [
                 'stream' => true,
                 'headers' => [
-                    'Authorization' => (new self())->getToken()
+                    'Authorization' => (new self())->getToken(),
                 ],
                 'multipart' => [
                     [
@@ -93,8 +98,8 @@ class Limg
                     [
                         'name' => 'title',
                         'contents' => $title,
-                    ]
-                ]
+                    ],
+                ],
             ]);
         } catch (GuzzleException $e) {
             echo $e->getMessage();
