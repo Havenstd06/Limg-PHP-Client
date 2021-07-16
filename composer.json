@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Havenstd06\\": "src/"
+            "Havenstd06\\Limg\\": "src"
         }
     },
     "autoload-dev": {

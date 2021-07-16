@@ -1,6 +1,6 @@
 <?php
 
-namespace Havenstd06\Abstracts;
+namespace Havenstd06\Limg\Abstracts;
 
 abstract class Entity
 {

@@ -18,16 +18,16 @@ composer require havenstd06/limg-php-client
 ## Usage
 
 ```php
-use Havenstd06\Limg\Limg-PHP-Client\Limg;
+use Havenstd06\Limg\Client-PHP-Client\Limg;
 
 $token = "abcdef1234";
-Limg::setApiToken($token);
+Client::setApiToken($token);
 
-$img = Limg::upload('./images/test.png');
+$img = Client::upload('./images/test.png');
 
 $getSuccess = $img->getSuccess(); // true || false
 $getStatus = $img->getStatus(); // 200
-$getTitle = $img->getTitle(); // "Image uploaded from Limg-PHP-Client"
+$getTitle = $img->getTitle(); // "Image uploaded from Client-PHP-Client"
 $getDatetime = $img->getDatetime(); // "1626435783"
 $getDate = $img->getDate(); // "2021-07-16 11:34:54"
 $getType = $img->getType(); // "image/jpeg"

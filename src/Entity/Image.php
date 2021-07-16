@@ -1,9 +1,9 @@
 <?php
 
-namespace Havenstd06\Entity;
+namespace Havenstd06\Limg\Entity;
 
 use DateTime;
-use Havenstd06\Abstracts\Entity;
+use Havenstd06\Limg\Abstracts\Entity;
 
 class Image extends Entity
 {

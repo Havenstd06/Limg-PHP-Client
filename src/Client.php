@@ -1,6 +1,6 @@
 <?php
 
-namespace Havenstd06;
+namespace Havenstd06\Limg;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
@@ -8,13 +8,13 @@ use GuzzleHttp\Exception\GuzzleException;
 use Havenstd06\Limg\Entity\Image;
 
 /**
- * Class Limg
+ * Class Client
  *
  * The main class for API consumption
  *
- * @package Havenstd06\Limg
+ * @package Havenstd06\Client
  */
-class Limg
+class Client
 {
     /** @var string The API access token */
     private static $token = null;
@@ -31,7 +31,7 @@ class Limg
         if ($token === null) {
             if (self::$token === null) {
                 $msg = 'No token provided, and none is globally set. ';
-                $msg .= 'Use Limg::setApiToken, or instantiate the Limg class with a $token parameter.';
+                $msg .= 'Use Client::setApiToken, or instantiate the Client class with a $token parameter.';
 
                 throw new LimgException($msg);
             }
@@ -74,7 +74,7 @@ class Limg
         return ($this->instanceToken) ?: self::$token;
     }
 
-    public static function upload($file, $title = 'Image uploaded from Limg-PHP-Client')
+    public static function upload($file, $title = 'Image uploaded from Client-PHP-Client')
     {
         self::validateUpload($file, $title);
 
