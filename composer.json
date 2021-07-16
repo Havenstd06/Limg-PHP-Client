@@ -1,21 +1,25 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "havenstd06/limg-php-client",
+    "description": "PHP package for the Limg.app website - allowing to upload images via the API of the website.",
     "keywords": [
-        ":vendor_name",
-        "package_slug"
+        "Havenstd06",
+        "limg-php-client",
+        "Limg",
+        "Symfony",
+        "Laravel"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/havenstd06/limg-php-client",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Thomas",
+            "email": "me@hvs.cx",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.0"
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.0",
@@ -25,12 +29,12 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src"
+            "Havenstd06\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Havenstd06\\Limg\\Tests\\": "tests"
         }
     },
     "scripts": {

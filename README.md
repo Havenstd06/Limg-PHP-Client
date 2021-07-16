@@ -1,53 +1,45 @@
-# :package_description
+# Limg PHP Client Package.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/run-tests?label=tests)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3ATests+branch%3Amaster)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
+<img src="https://limg.app/i/gQHOGpS.png/500" alt="limg logo">
 
----
-This package can be used as to scaffold a framework agnostic package. Follow these steps to get started:
-
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton
-2. Run "./configure.sh" to run a script that will replace all placeholders throughout all the files
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-
-This is where your description should go. Try and limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/havenstd06/limg-php-client.svg?style=flat-square)](https://packagist.org/packages/havenstd06/limg-php-client)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/havenstd06/limg-php-client/run-tests?label=tests)](https://github.com/havenstd06/limg-php-client/actions?query=workflow%3ATests+branch%3Amaster)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/havenstd06/limg-php-client/Check%20&%20fix%20styling?label=code%20style)](https://github.com/havenstd06/limg-php-client/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amaster)
+[![Total Downloads](https://img.shields.io/packagist/dt/havenstd06/limg-php-client.svg?style=flat-square)](https://packagist.org/packages/havenstd06/limg-php-client)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require vendor_slug/package_slug
+composer require havenstd06/limg-php-client
 ```
 
 ## Usage
 
 ```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, VendorName!');
+use Havenstd06\Limg\Limg-PHP-Client\Limg;
+
+$token = "abcdef1234";
+Limg::setApiToken($token);
+
+$img = Limg::upload('./images/test.png');
+
+$getSuccess = $img->getSuccess(); // true || false
+$getStatus = $img->getStatus(); // 200
+$getTitle = $img->getTitle(); // "Image uploaded from Limg-PHP-Client"
+$getDatetime = $img->getDatetime(); // "1626435783"
+$getDate = $img->getDate(); // "2021-07-16 11:34:54"
+$getType = $img->getType(); // "image/jpeg"
+$getUserId = $img->getUserId(); // 2
+$getUsername = $img->getUsername(); // "Havens"
+$getState = $img->getState(); // 2
+$getDeleteLink = $img->getDeleteLink(); // "https://limg.app/api/images/delete/xxxxxx"
+$getPageLink = $img->getPageLink(); // "https://limg.app/i/xxxxxx"
+$getLink = $img->getLink(); // "https://limg.app/i/xxxxxx.xxx"
 ```
 
-## Testing
-
-```bash
-composer test
-```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+More information on Limg's documentation [HERE](https://github.com/Havenstd06/Limg).
 
 ## Contributing
 
@@ -59,7 +51,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Thomas](https://github.com/Havenstd06)
 - [All Contributors](../../contributors)
 
 ## License

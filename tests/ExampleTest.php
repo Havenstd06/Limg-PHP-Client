@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Havenstd06\Limg\Limg\Tests;
 
 use PHPUnit\Framework\TestCase;
 
