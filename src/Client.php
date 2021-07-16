@@ -4,8 +4,8 @@ namespace Havenstd06\Limg;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
-
 use Havenstd06\Limg\Entity\Image;
+use Havenstd06\Limg\Exceptions\LimgException;
 
 /**
  * Class Client
