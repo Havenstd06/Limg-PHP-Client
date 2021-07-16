@@ -4,11 +4,9 @@ namespace Havenstd06;
 
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
-<<<<<<< HEAD
-use Havenstd06\Entity\Image;
-=======
+
 use Havenstd06\Limg\Entity\Image;
->>>>>>> 218a7fbe4e7c08266bbb9c63eb7339c335fcb5a3
+
 
 /**
  * Class Limg
