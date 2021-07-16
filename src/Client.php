@@ -12,7 +12,7 @@ use Havenstd06\Limg\Exceptions\LimgException;
  *
  * The main class for API consumption
  *
- * @package Havenstd06\Client
+ * @package Havenstd06\Limg
  */
 class Client
 {
