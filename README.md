@@ -23,7 +23,7 @@ use Havenstd06\Limg\Client as Limg;
 $token = "abcdef1234";
 Limg::setApiToken($token);
 
-$img = Limg::upload('./images/test.png');
+$img = Limg::upload('./images/test.png', $title = null);
 
 $getSuccess = $img->getSuccess(); // true || false
 $getStatus = $img->getStatus(); // 200
