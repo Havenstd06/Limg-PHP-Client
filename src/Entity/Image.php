@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Havenstd06\Entity;
 
 use DateTime;
@@ -10,7 +9,7 @@ class Image extends Entity
 {
     /**
      * Should always return "success"
-     * @return boolean
+     * @return bool
      */
     public function getSuccess()
     {
@@ -19,7 +18,7 @@ class Image extends Entity
 
     /**
      * Should always return "status"
-     * @return integer
+     * @return int
      */
     public function getStatus()
     {
@@ -69,7 +68,7 @@ class Image extends Entity
 
     /**
      * Should always return "user id"
-     * @return integer
+     * @return int
      */
     public function getUserId()
     {
@@ -87,7 +86,7 @@ class Image extends Entity
 
     /**
      * Should always return "image state"
-     * @return integer
+     * @return int
      */
     public function getState()
     {
