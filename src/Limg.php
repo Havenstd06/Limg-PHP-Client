@@ -1,10 +1,10 @@
 <?php
 
-namespace Havenstd06\Limg;
+namespace Havenstd06;
 
-use Havenstd06\Limg\Entity\Image;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception\GuzzleException;
+use Havenstd06\Entity\Image;
 
 /**
  * Class Limg
