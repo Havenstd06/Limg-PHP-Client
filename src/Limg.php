@@ -7,7 +7,6 @@ use GuzzleHttp\Exception\GuzzleException;
 
 use Havenstd06\Limg\Entity\Image;
 
-
 /**
  * Class Limg
  *
