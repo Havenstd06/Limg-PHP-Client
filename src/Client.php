@@ -74,7 +74,7 @@ class Client
         return ($this->instanceToken) ?: self::$token;
     }
 
-    public static function upload($file, $title = 'Image uploaded from Client-PHP-Client')
+    public static function upload($file, $title = 'Image uploaded from Limg-PHP-Client')
     {
         self::validateUpload($file, $title);
 
